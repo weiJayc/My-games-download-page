@@ -78,12 +78,16 @@ nav ul li a:hover {
 
 /* 第一個遊戲背景 */
 .game-section .bg1 {
-    background-image: url('Image/background1.png'); /* 替換為實際圖片路徑 */
+    background-image: url('Image/background1.png'); 
+    width: 100%;
+    overflow-y: hidden;
 }
 
 /* 第二個遊戲背景 */
 .game-section .bg2 {
-    background-image: url('Image/background2.png'); /* 替換為實際圖片路徑 */
+    background-image: url('Image/background2.png'); 
+    width: 100%;
+    overflow-y: hidden;
 }
 
 .centered-text {
