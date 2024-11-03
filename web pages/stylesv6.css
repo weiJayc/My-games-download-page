@@ -55,7 +55,7 @@ nav ul li a .hover-overlay {
     background-color: rgba(0, 0, 0, 0.3); /* 按鈕上的黑色遮罩 */
     transition: top 0.3s;
     z-index: 1;
-    border-radius: 25px;
+    border-radius: 30px;
 }
 
 /* 確保標籤內容在遮罩上方 */
@@ -204,7 +204,7 @@ nav ul li a span {
     background-color: rgba(47, 47, 47, 0.3);
     transition: top 0.3s;
     z-index: 1;
-    /* border-radius: 30px; */
+    border-radius: 30px;
 }
 /* end new */
 /* 底部橫條 */
