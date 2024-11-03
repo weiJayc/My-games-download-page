@@ -15,7 +15,7 @@ body {
 nav {
     width: 100%;
     background-color: #e0e0e0;
-    padding: 30px 0;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -29,20 +29,43 @@ nav ul {
 }
 
 nav ul li a {
+    position: relative; /* 讓遮罩效果相對於標籤項目 */
+    display: inline-block;
     color: #333;
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
-    transition: background-color 0.3s;
+    overflow: hidden; /* 遮罩效果在範圍內 */
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #ccc;
+    background-color: #e0e0e0;
     border-radius: 25px;
 }
 
+/* for jQuery */
+/* 遮罩效果 */
+nav ul li a .hover-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* 按鈕上的黑色遮罩 */
+    transition: top 0.3s;
+    z-index: 1;
+    border-radius: 25px;
+}
 
-/* 全屏背景圖片樣式 */
+/* 確保標籤內容在遮罩上方 */
+nav ul li a span {
+    position: relative;
+    z-index: 2;
+}
+/* end for jQuery */
+
+/* 全屏背景圖片 */
 .game-section {
     position: relative;
     padding-top: 0px; /* 留出標籤條的空間 */ 
@@ -76,14 +99,14 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* 第一個遊戲背景 */
+/* Flappy Birds遊戲背景 */
 .game-section .bg1 {
     background-image: url('Image/background1.png'); 
     width: 100%;
     overflow-y: hidden;
 }
 
-/* 第二個遊戲背景 */
+/* Cubethon遊戲背景 */
 .game-section .bg2 {
     background-image: url('Image/background2.png'); 
     width: 100%;
@@ -146,9 +169,11 @@ nav ul li a:hover {
     text-align: center;
     font-size: 1.2em;
 }
-/* 下載按鈕樣式 */
+
+/* 下載按鈕 */
 .download-btn {
     display: inline-block;
+    position: relative;
     padding: 10px 20px;
     background-color: #ffcc00;
     color: #333;
@@ -156,13 +181,33 @@ nav ul li a:hover {
     font-size: 1.2em;
     border-radius: 30px;
     transition: background-color 0.3s;
+    overflow:hidden /* new */
+    
 }
-
+/*
 .download-btn:hover {
     background-color: #ff9900;
 }
+*/
+/* new */
+.download-btn span {
+    position: relative;
+    z-index: 2;
+}
 
-/* 底部樣式 */
+.download-btn .hover-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 47, 47, 0.3);
+    transition: top 0.3s;
+    z-index: 1;
+    /* border-radius: 30px; */
+}
+/* end new */
+/* 底部橫條 */
 footer {
     text-align: center;
     padding: 20px;
