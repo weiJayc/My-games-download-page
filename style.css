@@ -101,14 +101,14 @@ nav ul li a span {
 
 /* Flappy Birds遊戲背景 */
 .game-section .bg1 {
-    background-image: url('../images/background1.png');
+    background-image: url('images/background1.png');
     width: 100%;
     overflow-y: hidden;
 }
 
 /* Cubethon遊戲背景 */
 .game-section .bg2 {
-    background-image: url('../images/background2.png');
+    background-image: url('images/background2.png');
     width: 100%;
     overflow-y: hidden;
 }
@@ -141,7 +141,7 @@ nav ul li a span {
     color: #333;
     padding: 50px;
     width: 100vw;
-    height: calc(100vw * 1.3); /* 高度為全屏寬度的1.3倍 */
+    min-height: calc(100vw * 1.3); /* 高度至少為全屏寬度的1.3倍，內容較多時會自動長高 */
     text-align: center;
 }
 
@@ -158,8 +158,9 @@ nav ul li a span {
     gap: 30px;
 }
 
-.centered-images img {
-    width: 60%; /* 圖片寬度為60% */
+.centered-images img,
+.centered-images video {
+    width: 60%; /* 圖片與影片寬度為60% */
     height: auto;
     border-radius: 25px;
 }
